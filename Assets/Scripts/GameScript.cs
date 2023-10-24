@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class GameScript : MonoBehaviour
@@ -57,5 +58,21 @@ public class GameScript : MonoBehaviour
     {
         ChesspieceScript cp = obj.GetComponent<ChesspieceScript>();
         positionsChesspiece[cp.GetxChessboard(), cp.GetyChessboard()] = obj;
+    }
+
+    public void SetPositionEmpty(int x, int y)
+    {
+        positionsChesspiece[x,y] = null;
+    }
+
+    public GameObject GetPosition(int x, int y)
+    {
+      return positionsChesspiece[x,y];
+    }
+
+    public bool IsPositionOnBoard(int x, int y)
+    {
+      if(x < 0 || y < 0 || x >= positionsChesspiece.GetLength(0) || y >= positionsChesspiece.GetLength(1)) return false;
+      return true;
     }
 }
