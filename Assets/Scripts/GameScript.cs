@@ -10,7 +10,7 @@ public class GameScript : MonoBehaviour
     private GameObject[] playerBlack, playerWhite = new GameObject[16];
     private string currentPlayer = "white";
     private bool isGameOver = false;
-    void Start()
+    public void Start()
     {
       playerWhite = new GameObject[]
       {
@@ -48,14 +48,16 @@ public class GameScript : MonoBehaviour
     {
         GameObject obj = Instantiate(chesspiece, new Vector3(0, 0, -1), Quaternion.identity);
         ChesspieceScript cp = obj.GetComponent<ChesspieceScript>();
+        cp.name = name;
         cp.SetxChessboard(x);
         cp.SetyChessboard(y);
-        cp.name = name;
         cp.Activate();
+        SetPosition(obj);
         return obj;
     }
     public void SetPosition(GameObject obj)
     {
+      
         ChesspieceScript cp = obj.GetComponent<ChesspieceScript>();
         positionsChesspiece[cp.GetxChessboard(), cp.GetyChessboard()] = obj;
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3655523573636798223}
   - component: {fileID: 1814625889458373254}
   - component: {fileID: 5887504124827522029}
+  - component: {fileID: -4333045090545822505}
   m_Layer: 0
   m_Name: Chesspiece
   m_TagString: Untagged
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  movePlate: {fileID: 0}
+  movePlate: {fileID: 6795670353968175257, guid: 779088ff69f6d73fb9072955734d0560, type: 3}
   black_queen: {fileID: 21300000, guid: e33132f64643c2fad92496bd4a317a12, type: 3}
   black_knight: {fileID: 21300000, guid: 9c310b9812bd469778e86c08f1720efb, type: 3}
   black_bishop: {fileID: 21300000, guid: 436803f2e6247f7c69f6a0fb8110e394, type: 3}
@@ -111,3 +112,48 @@ MonoBehaviour:
   white_king: {fileID: 21300000, guid: 952b225bf82efbaab98a15b0dcb24b87, type: 3}
   white_rook: {fileID: 21300000, guid: 8abfe429a70aebb81806905cfc7abedd, type: 3}
   white_pawn: {fileID: 21300000, guid: 74bf2dd280f84f673919ef01e27e4c23, type: 3}
+--- !u!61 &-4333045090545822505
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427653914152298253}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.14, y: 0.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
