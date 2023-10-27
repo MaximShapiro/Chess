@@ -25,6 +25,8 @@ public class MovePlateScript : MonoBehaviour
         if(IsAttacking)
         {
             GameObject chesspiece = controller.GetComponent<GameScript>().GetPosition(matrixX, matrixY);
+            if(chesspiece.name == "white_king") controller.GetComponent<GameScript>().Winner("black");
+            if(chesspiece.name == "black_king") controller.GetComponent<GameScript>().Winner("white");
             Destroy(chesspiece);
         }
 
