@@ -37,6 +37,8 @@ public class MovePlateScript : MonoBehaviour
 
         controller.GetComponent<GameScript>().SetPosition(reference);
 
+        controller.GetComponent<GameScript>().NextTurn();
+
         reference.GetComponent<ChesspieceScript>().RemoveMovePlates();
     }
     public void SetCoordinates(int x, int y)

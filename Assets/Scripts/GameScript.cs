@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
-using UnityEngine;
+using UnityEngine; 
+using UnityEngine.SceneManagement;
+
 
 public class GameScript : MonoBehaviour
 {
@@ -76,5 +78,34 @@ public class GameScript : MonoBehaviour
     {
       if(x < 0 || y < 0 || x >= positionsChesspiece.GetLength(0) || y >= positionsChesspiece.GetLength(1)) return false;
       return true;
+    }
+    public string GetCurrentPlayer()
+    {
+      return currentPlayer;
+    }
+    public bool IsGameOver()
+    {
+      return isGameOver;
+    }
+    public void NextTurn()
+    {
+        if(currentPlayer == "white")
+        
+        {
+          currentPlayer = "black";
+        }
+
+        else
+        {
+          currentPlayer = "white";
+        }
+    }
+    public void Update() 
+    {
+      if(isGameOver == true && Input.GetMouseButtonDown(0))
+      {
+        isGameOver = false;
+        SceneManager.LoadScene("Game");
+      }
     }
 }

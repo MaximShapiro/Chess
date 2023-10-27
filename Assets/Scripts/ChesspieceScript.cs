@@ -66,8 +66,11 @@ public class ChesspieceScript : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if(!controller.GetComponent<GameScript>().IsGameOver() && controller.GetComponent<GameScript>().GetCurrentPlayer() == player)
+        {
         RemoveMovePlates();
         InitiateMovePlates();
+        }
     }
     public void RemoveMovePlates()
     {
